@@ -1,4 +1,6 @@
-#pragma once
+#ifndef HITABLELIST_H
+#define HITABLELIST_H
+
 #include "hitable.h"
 
 class hitableList: public hitable {
@@ -22,3 +24,4 @@ bool hitableList::hit(const ray& r, float tMin, float tMax, hitRecord& rec) cons
 	}
 	return hitAnything;
 }
+#endif

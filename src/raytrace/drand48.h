@@ -1,5 +1,4 @@
-﻿#pragma once
-#ifndef DRAND48_H
+﻿#ifndef DRAND48_H
 #define DRAND48_H
 
 #include <stdlib.h>
@@ -21,6 +20,14 @@ double drand48(void)
 void srand48(unsigned int i)
 {
 	seed = (((long long int)i) << 16) | rand();
+}
+
+vec3 randomInunitDisk() {
+	vec3 p;
+	do {
+		p = 2. * vec3(drand48(), drand48(), 0) - vec3(1, 1, 0);
+	} while (dot(p, p) >= 1.);
+	return p;
 }
 
 #endif

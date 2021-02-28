@@ -1,15 +1,8 @@
-#pragma once
+#ifndef CAMERA_H
+#define CAMERA_H
 #include "ray.h"
 #include <corecrt_math_defines.h>
 #include "drand48.h"
-
-vec3 randomInunitDisk() {
-	vec3 p;
-	do {
-		p = 2. * vec3(drand48(), drand48(), 0) - vec3(1, 1, 0);
-	} while (dot(p, p) >= 1.);
-	return p;
-}
 
 class camera {
 public:
@@ -41,3 +34,4 @@ public:
 	float lensRadius;
 	vec3 u, v, w;
 };
+#endif

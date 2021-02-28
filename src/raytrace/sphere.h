@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SPHERE_H
+#define SPHERE_H
 #include "hitable.h"
 
 class sphere : public hitable {
@@ -36,3 +37,4 @@ bool sphere::hit(const ray& r, float tMin, float tMax, hitRecord& rec) const {
 	}
 	return false;
 }
+#endif

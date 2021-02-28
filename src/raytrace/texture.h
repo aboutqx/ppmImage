@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TEXTURE_H_
+#define TEXTURE_H_
 #include "vec3.h"
 
 class texture {
@@ -21,3 +22,4 @@ public:
 private:
     color color_value;
 };
+#endif
